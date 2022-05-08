@@ -1,0 +1,32 @@
+<!--<div class="card mb-4 box-shadow">
+<div class="card-header">
+    <h4 class="my-0 font-weight-normal">{{name}}</h4>
+  </div>
+  <div class="card-body">
+    <h1 class="card-title pricing-card-title">
+     
+      ${{price}} <small class="text-muted">/ mo</small></h1>
+    <ul class="list-unstyled mt-3 mb-4">
+      <li *ngFor="let feature of features" >{{feature.title}}</li>
+    </ul>
+    <button  (click)="doAction(id)" type="button" class="btn btn-lg btn-block btn-outline-primary ">Button</button>
+  </div>
+</div>
+-->
+<div class="card mb-5 mb-lg-0 list">
+  <div class="card-body">
+    <h5 class="card-title text-muted text-uppercase text-center">{{name}}</h5>
+    <h6 class="card-price text-center">${{price}}<span class="period">/month</span></h6>
+    <hr>
+    <ul *ngFor="let feature of features" class="fa-ul">
+      <li><span class="fa-li"><i class="fas fa-check"></i></span><strong> 	
+        &#9989;{{feature.title}}</strong></li>
+    </ul>
+    <ul *ngFor="let feature_muted of features_muted" class="fa-ul">
+      <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>&#10060;{{feature_muted.title}}</li>
+    </ul>
+    <div class="d-grid">
+      <a href="#" class="btn btn-primary text-uppercase" (click)="doAction(id)" >Button</a>
+    </div>
+  </div>
+</div>
